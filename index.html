@@ -87,7 +87,8 @@ font-size: 25px;
 }
   </style>
 </head>	
-  <body> 
+  <body>
+	<div class="container">
  <h2> Распределение грузопотоков</h2>
   <p><h3>меньше объемов выше положение в таблице</h3> </p>
   <h5>данные на <p id="time"></p></h5>
@@ -159,11 +160,17 @@ font-size: 25px;
 	</table>
 <input class="btn btn-info" type='submit' value='Ввод данных для расчета' onclick='getValueW()'></input>
 
-
+</div>
    
  
 	
 	<script>
+		let tg = window.Telegram.WebApp;
+		tg.expand();
+		tg.MainButton.textColor = "#FFFFFF";
+		tg.MainButton.color = "#2cab37";
+
+
 	var storeZ = [
 	     {name:"№5",R1:0,
 		 R2:0,
