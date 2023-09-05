@@ -312,6 +312,7 @@ font-size: 25px;
 	 
 	  for (let i=0; i<Allinputs.length; i++){
 		Allinputs[i].addEventListener("change",function(){
+
 			if (tg.MainButton.isVisible){
 				tg.MainButton.hide();
 			}else{
@@ -322,7 +323,12 @@ font-size: 25px;
 	  })
 		
 		};
-		Telegram.WebApp.onEvent("mainButtonClicked", getValueW)
+		Telegram.WebApp.onEvent("mainButtonClicked", function(){
+			getValueW();
+			if (tg.MainButton.isVisible){
+				tg.MainButton.hide();
+		}
+	})
 	</script>
 </body>
  </html>
