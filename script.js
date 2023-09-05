@@ -1,14 +1,13 @@
-// let tg = window.Telegram.WebApp;
-// 		 tg.showAlert(`Добро пожаловать, ${tg.initDataUnsafe.user.first_name}!`);
-// 		 tg.expand();
-// 		 tg.MainButton.textColor = "#FFFFFF";
-// 		 tg.MainButton.color = "#2cab37";
-// 		 let user = document.getElementById('user');
-
-// 		 let p = document.createElement('p');
-// 		 p.innerText = `${tg.initDataUnsafe.user.first_name}${tg.initDataUnsafe.user.last_name}`;
+    let tg = window.Telegram.WebApp;
+ 		 tg.showAlert(`${tg.initDataUnsafe.user.first_name} !\nДобро пожаловать`);
+ 		 tg.expand();
+ 		 tg.MainButton.textColor = "#FFFFFF";
+ 		 tg.MainButton.color = "#2cab37";
+		 let user = document.getElementById('user');
+ 		 let p = document.createElement('p');
+ 		 p.innerText = `${tg.initDataUnsafe.user.first_name}${tg.initDataUnsafe.user.last_name}`;
 		
-// 		 user.appendChild(p);
+ 		 user.appendChild(p);
 		
 
 	var storeZ = [
