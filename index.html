@@ -166,18 +166,18 @@ font-size: 25px;
  
 <script src="https://telegram.org/js/telegram-web-app.js"></script>	
 	<script>
-		let tg = window.Telegram.WebApp;
-		tg.showAlert(`Добро пожаловать, ${tg.initDataUnsafe.user.first_name}!`);
-		tg.expand();
-		tg.MainButton.textColor = "#FFFFFF";
-		tg.MainButton.color = "#2cab37";
-		let user = document.getElementById('user');
+		// let tg = window.Telegram.WebApp;
+		// tg.showAlert(`Добро пожаловать, ${tg.initDataUnsafe.user.first_name}!`);
+		// tg.expand();
+		// tg.MainButton.textColor = "#FFFFFF";
+		// tg.MainButton.color = "#2cab37";
+		// let user = document.getElementById('user');
 
-		let p = document.createElement('p');
-		p.innerText = `${tg.initDataUnsafe.user.first_name}
-		${tg.initDataUnsafe.user.last_name}`;
-		user.appendChild(p);
-
+		// let p = document.createElement('p');
+		// p.innerText = `${tg.initDataUnsafe.user.first_name}${tg.initDataUnsafe.user.last_name}`;
+		
+		// user.appendChild(p);
+		
 
 	var storeZ = [
 	     {name:"№5",R1:0,
@@ -308,6 +308,20 @@ font-size: 25px;
 		}
 		
 	  }
+	  let Allinputs  = document.querySelectorAll("input");
+	 
+	  for (let i=0; i<Allinputs.length; i++){
+		Allinputs[i].addEventListener("click",function(){
+			if (tg.MainButton.isVisible){
+				tg.MainButton.hide();
+			}else{
+				tg.MainButton.setText("добавить информацию");
+				tg.MainButton.show();
+			}
+			
+	  })
+		
+		};
 	</script>
 </body>
  </html>
