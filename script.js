@@ -1,5 +1,5 @@
 let tg = window.Telegram.WebApp;
- 		 tg.showAlert(`Добро пожаловать, ${tg.initDataUnsafe.user.first_name}!`);
+ 		 //tg.showAlert(`Добро пожаловать, ${tg.initDataUnsafe.user.first_name}!`);
  		 tg.expand();
  		 tg.MainButton.textColor = "#FFFFFF";
  		 tg.MainButton.color = "#2cab37";
