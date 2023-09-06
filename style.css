@@ -5,6 +5,14 @@
 .container {
     max-width: 398px;
 }
+.inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 200px 200px 200px;
+}
+.item {
+    text-align: center;
+}
    #input1,#input2,#input1W,#input2W {
     width: 60%; /* Ширина поля в пикселах */
    } 
