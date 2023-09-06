@@ -2,6 +2,9 @@
     margin: 8px;
     background-color: #08f19b1a;
 }
+.container {
+    max-width: 398px;
+}
    #input1,#input2,#input1W,#input2W {
     width: 60%; /* Ширина поля в пикселах */
    } 
