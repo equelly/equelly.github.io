@@ -173,7 +173,7 @@ let tg = window.Telegram.WebApp;
 		};
         //объект Telegram.WebApp с помощью метода onEvent определяет событие "mainButtonClicked" клик на главную кнопку после чего выполняетя функция и инстукция по сокрытию кнопки
 		Telegram.WebApp.onEvent("mainButtonClicked", function(){
-			getValueW();
+			getValue();
 			if (tg.MainButton.isVisible){
 				tg.MainButton.hide();
 		}
