@@ -68,12 +68,7 @@ let tg = window.Telegram.WebApp;
  
 };
 	  
-	  
-	/*for (var i = 0; i <storeZ.length; i++ ){
-	     document.getElementById("demo").innerHTML += '<p>Перегрузка'+ storeZ[i].name +'<br>Руда '+ storeZ[i].R +'</p>';
-		 
-	  }*/
-	
+
       
      
 	  //функция для вывода даты в формате 00.00.00
@@ -104,8 +99,8 @@ let tg = window.Telegram.WebApp;
 		//document.getElementsByClassName('cls1')[i].value="";
 		var val2 = document.getElementsByClassName('cls2')[i].value;
 		//document.getElementsByClassName('cls2')[i].value="";
-		var st1 = storeZ[i].R1=val1;//присваеваем объекту массива значение из поля  ввода
-		var st2 = storeZ[i].R2=val2;
+		var st1 = store[i].R1=val1;//присваеваем объекту массива значение из поля  ввода
+		var st2 = store[i].R2=val2;
 		}
 		document.getElementById("demo").innerHTML= "";
 		//document.getElementById("name").innerHTML= "";
@@ -115,8 +110,8 @@ let tg = window.Telegram.WebApp;
 		});
 		
 		for(var i=0; i <store.length; i++ ) {
-		//document.getElementById("name").innerHTML +='<div>'+ storeZ[i].name +  '</div>';
-		document.getElementById("demo").innerHTML += '<p>Перегрузка <strong>'+ storeZ[i].name +  '</strong><br>R1__ <markR>'+ storeZ[i].R1 +'</markR>R2 __<markR>'+ storeZ[i].R2 +'</markR> всего: '+ storeZ[i].R() +'</p>';
+		
+		document.getElementById("demo").innerHTML += '<p>Перегрузка <strong>'+ store[i].name +  '</strong><br>R1__ <markR>'+ store[i].R1 +'</markR>R2 __<markR>'+ store[i].R2 +'</markR> всего: '+ store[i].R() +'</p>';
 		}
 		
 	  }
