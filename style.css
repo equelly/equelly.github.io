@@ -14,7 +14,7 @@
     text-align: center;
 }
    #input1,#input2 {
-    width: 50%; /* Ширина поля в пикселах */
+    width: 25%;   /* Ширина поля в пикселах */
    } 
    markR {
     background-color: #00ffc4;
