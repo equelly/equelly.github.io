@@ -10,7 +10,7 @@ let tg = window.Telegram.WebApp;
  		 user.appendChild(p);
 		
          
-	var storeZ = [
+	var store = [
 	     {name:"№5",R1:0,
 		 R2:0,
 		 R:function (){
@@ -21,44 +21,42 @@ let tg = window.Telegram.WebApp;
 		 R:function (){
 		 return Number(this.R1)+Number(this.R2);}
 		 },
+         {name:"№4",R1:{
+            r:0,
+            action:"+",
+            },
+            R2:0,
+            R:function (){
+            return Number(this.R1.r)+Number(this.R2);}
+            },
+            {name:"№9",R1:{
+            r:0,
+            action:"+",
+            },
+            R2:0,
+            R:function (){
+            return Number(this.R1.r)+Number(this.R2);}
+            },
+            {name:"№10",R1:{
+            r:0,
+            action:"+",
+            },
+            R2:0,
+            R:function (){
+            return Number(this.R1.r)+Number(this.R2);}
+            },
+            {name:"№14",R1:{
+            r:0,
+            action:"+",
+            },
+            R2:0,
+            R:function (){
+            return Number(this.R1.r)+Number(this.R2);}
+            },
 	  ];
-	  var storeW = [
-	    {name:"№4",R1:{
-		 r:0,
-		 action:"+",
-		 },
-		 R2:0,
-		 R:function (){
-		 return Number(this.R1.r)+Number(this.R2);}
-		 },
-	     {name:"№9",R1:{
-		 r:0,
-		 action:"+",
-		 },
-		 R2:0,
-		 R:function (){
-		 return Number(this.R1.r)+Number(this.R2);}
-		 },
-		 {name:"№10",R1:{
-		 r:0,
-		 action:"+",
-		 },
-		 R2:0,
-		 R:function (){
-		 return Number(this.R1.r)+Number(this.R2);}
-		 },
-		 {name:"№14",R1:{
-		 r:0,
-		 action:"+",
-		 },
-		 R2:0,
-		 R:function (){
-		 return Number(this.R1.r)+Number(this.R2);}
-		 },
-		 
-	  ];
+
 	  var   i, x = "", z = "", y= "" ;
-	  for (let i = 0; i < storeZ.length; i++){ 
+	  for (let i = 0; i < store.length; i++){ 
          x += storeZ[i].name+ "<br>";
          z += storeZ[i].input1="<input type='checkbox' class='checkmark'/><input id='input1' class='cls1' type='number' placeholder='зона1'><input type='checkbox' class='radio'/>"+ "<br>";
 		 y += storeZ[i].input2="<input type='checkbox'class='checkmark'/><input id='input2' class='cls2' type='number' placeholder='зона2'><input type='checkbox' class='radio'/>"+ "<br>";
@@ -69,19 +67,6 @@ let tg = window.Telegram.WebApp;
 	      
  
 };
-	  var   i, x = "", z = "", y= "";
-	  for (let i = 0; i < storeW.length; i++){ 
-         x += storeW[i].name+ "<br>";
-         z += storeW[i].R1.r="<input type='checkbox'class='checkmark'/><input id='input1W' class='cls1W' type='number' placeholder='зона №1'><input type='checkbox' class='radio'/>"+ "<br>";
-		 y += storeW[i].R2="<input type='checkbox'class='checkmark'/><input id='input2W' class='cls2W' type='number' placeholder='зона №2'><input type='checkbox' class='radio'/>"+ "<br>";
-	     
-		  document.getElementById("nameW").innerHTML = x;
-          document.getElementById("input1W").innerHTML = z;
-	      document.getElementById("input2W").innerHTML = y;
-	      
- 
-};
-	  
 	  
 	  
 	/*for (var i = 0; i <storeZ.length; i++ ){
