@@ -89,14 +89,15 @@ let tg = window.Telegram.WebApp;
         if (yy < 10) yy = '0' + yy;
 
         var hh = date.getHours();
+        if (hh < 10) hh = '0' + hh;
         var min = date.getMinutes();
-        
+        if (min < 10) min = '0' + min;
       
         return dd + '.' + mm + '.' + yy+ '(' + hh + ':'+min+')';
       } 
 	 function getValue() {
 	 
-	for (var i = 0; i < storeZ.length; i++) {
+	for (var i = 0; i < store.length; i++) {
 	var d = new Date(); 
 	 document.getElementById('time').innerHTML = formatDate(d); 
 	    var val1 = document.getElementsByClassName('cls1')[i].value;//переменной val присваиваем значение поля ввода
@@ -109,7 +110,7 @@ let tg = window.Telegram.WebApp;
 		document.getElementById("demo").innerHTML= "";
 		//document.getElementById("name").innerHTML= "";
 		
-		storeZ.sort(function(a,b){
+		store.sort(function(a,b){
 		return a.R()-b.R();
 		});
 		
