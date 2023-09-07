@@ -42,7 +42,7 @@ let tg = window.Telegram.WebApp;
             return Number(this.R1)+Number(this.R2);}
             },
 	  ];
-console.log(store[1].name);
+
 	  var   i, x = "", z = "", y= "" ;
 	  for (let i = 0; i < store.length; i++){ 
          x += store[i].name+ "<br>";
