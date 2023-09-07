@@ -3,11 +3,11 @@ let tg = window.Telegram.WebApp;
  		 tg.expand();
  		 tg.MainButton.textColor = "#FFFFFF";
  		 tg.MainButton.color = "#2cab37";
-		 let user = document.getElementById('user');
- 		 let p = document.createElement('p');
- 		 p.innerText = `${tg.initDataUnsafe.user.first_name}${tg.initDataUnsafe.user.last_name}`;
+		//  let user = document.getElementById('user');
+ 		//  let p = document.createElement('p');
+ 		//  p.innerText = `${tg.initDataUnsafe.user.first_name}${tg.initDataUnsafe.user.last_name}`;
 		
- 		 user.appendChild(p);
+ 		//  user.appendChild(p);
 		
          
 	var store = [
@@ -21,45 +21,33 @@ let tg = window.Telegram.WebApp;
 		 R:function (){
 		 return Number(this.R1)+Number(this.R2);}
 		 },
-         {name:"№4",R1:{
-            r:0,
-            action:"+",
+         {name:"№4",R1:0,
+		 R2:0,
+		 R:function (){
+		 return Number(this.R1)+Number(this.R2);}
             },
+            {name:"№9",R1:0,
             R2:0,
             R:function (){
-            return Number(this.R1.r)+Number(this.R2);}
+            return Number(this.R1)+Number(this.R2);}
             },
-            {name:"№9",R1:{
-            r:0,
-            action:"+",
-            },
+            {name:"№10",R1:0,
             R2:0,
             R:function (){
-            return Number(this.R1.r)+Number(this.R2);}
+            return Number(this.R1)+Number(this.R2);}
             },
-            {name:"№10",R1:{
-            r:0,
-            action:"+",
-            },
+            {name:"№14",R1:0,
             R2:0,
             R:function (){
-            return Number(this.R1.r)+Number(this.R2);}
-            },
-            {name:"№14",R1:{
-            r:0,
-            action:"+",
-            },
-            R2:0,
-            R:function (){
-            return Number(this.R1.r)+Number(this.R2);}
+            return Number(this.R1)+Number(this.R2);}
             },
 	  ];
 
 	  var   i, x = "", z = "", y= "" ;
 	  for (let i = 0; i < store.length; i++){ 
          x += store[i].name+ "<br>";
-         z += store[i].input1="<input type='checkbox' class='checkmark'/><input id='input1' class='cls1' type='number' placeholder='зона1'><input type='checkbox' class='radio'/>"+ "<br>";
-		 y += store[i].input2="<input type='checkbox'class='checkmark'/><input id='input2' class='cls2' type='number' placeholder='зона2'><input type='checkbox' class='radio'/>"+ "<br>";
+         z += store[i].input1="<input type='checkbox' class='checkmark'/><input id='input1' class='cls1' type='number' placeholder='зона1'>"+ "<br>";
+		 y += store[i].input2="<input type='checkbox'class='checkmark'/><input id='input2' class='cls2' type='number' placeholder='зона2'>"+ "<br>";
 	     
 		  document.getElementById("name").innerHTML = x;
           document.getElementById("input1").innerHTML = z;
