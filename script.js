@@ -57,9 +57,9 @@ let tg = window.Telegram.WebApp;
 
 	  var   i, x = "", z = "", y= "" ;
 	  for (let i = 0; i < store.length; i++){ 
-         x += storeZ[i].name+ "<br>";
-         z += storeZ[i].input1="<input type='checkbox' class='checkmark'/><input id='input1' class='cls1' type='number' placeholder='зона1'><input type='checkbox' class='radio'/>"+ "<br>";
-		 y += storeZ[i].input2="<input type='checkbox'class='checkmark'/><input id='input2' class='cls2' type='number' placeholder='зона2'><input type='checkbox' class='radio'/>"+ "<br>";
+         x += store[i].name+ "<br>";
+         z += store[i].input1="<input type='checkbox' class='checkmark'/><input id='input1' class='cls1' type='number' placeholder='зона1'><input type='checkbox' class='radio'/>"+ "<br>";
+		 y += store[i].input2="<input type='checkbox'class='checkmark'/><input id='input2' class='cls2' type='number' placeholder='зона2'><input type='checkbox' class='radio'/>"+ "<br>";
 	     
 		  document.getElementById("name").innerHTML = x;
           document.getElementById("input1").innerHTML = z;
@@ -114,36 +114,13 @@ let tg = window.Telegram.WebApp;
 		return a.R()-b.R();
 		});
 		
-		for(var i=0; i <storeZ.length; i++ ) {
+		for(var i=0; i <store.length; i++ ) {
 		//document.getElementById("name").innerHTML +='<div>'+ storeZ[i].name +  '</div>';
 		document.getElementById("demo").innerHTML += '<p>Перегрузка <strong>'+ storeZ[i].name +  '</strong><br>R1__ <markR>'+ storeZ[i].R1 +'</markR>R2 __<markR>'+ storeZ[i].R2 +'</markR> всего: '+ storeZ[i].R() +'</p>';
 		}
 		
 	  }
-	  function getValueW() {
-	 
-	for (var i = 0; i < storeW.length; i++) {
-	 
-	    var val1 = document.getElementsByClassName('cls1W')[i].value;//переменной val присваиваем значение поля ввода
-		//document.getElementsByClassName('cls1W')[i].value="";
-		var val2 = document.getElementsByClassName('cls2W')[i].value;
-		//document.getElementsByClassName('cls2W')[i].value="";
-		var st1 = storeW[i].R1.r=val1;//присваеваем объекту массива значение из поля  ввода
-		var st2 = storeW[i].R2=val2;
-		}
-		document.getElementById("demoW").innerHTML= "";
-		//document.getElementById("nameW").innerHTML= "";
-		
-		storeW.sort(function(a,b){
-		return a.R()-b.R();
-		});
-		
-		for(var i=0; i <storeW.length; i++ ) {
-		//document.getElementById("nameW").innerHTML +='<div>'+ storeW[i].name +  '</div>';
-		document.getElementById("demoW").innerHTML += '<p>Перегрузка<strong>'+ storeW[i].name +  '</strong><br>R1__<markR>'+ storeW[i].R1.r +'</markR>R2__<markR>'+ storeW[i].R2 +'</markR>  всего: '+ storeW[i].R() +'</p>';
-		}
-		
-	  }
+
 	  let Allinputs  = document.querySelectorAll("input");
 	 
 	  for (let i=0; i<Allinputs.length; i++){
