@@ -90,9 +90,7 @@ let tg = window.Telegram.WebApp;
 	  }*/
 	
       
-      let d = new Date();
-      
-      document.getElementById("time").innerHTML = formatDate(d); 
+     
 	  //функция для вывода даты в формате 00.00.00
      function formatDate(date) {
 
@@ -104,14 +102,18 @@ let tg = window.Telegram.WebApp;
       
         var yy = date.getFullYear() % 100;
         if (yy < 10) yy = '0' + yy;
+
+        var hh = date.getHours();
+        var min = date.getMinutes();
+        
       
-        return dd + '.' + mm + '.' + yy;
+        return dd + '.' + mm + '.' + yy+ '(' + hh + ':'+min+')';
       } 
 	 function getValue() {
 	 
 	for (var i = 0; i < storeZ.length; i++) {
 	var d = new Date(); 
-	 document.getElementById('time').innerHTML =d; 
+	 document.getElementById('time').innerHTML = formatDate(d); 
 	    var val1 = document.getElementsByClassName('cls1')[i].value;//переменной val присваиваем значение поля ввода
 		//document.getElementsByClassName('cls1')[i].value="";
 		var val2 = document.getElementsByClassName('cls2')[i].value;
@@ -173,7 +175,7 @@ let tg = window.Telegram.WebApp;
 		};
         //объект Telegram.WebApp с помощью метода onEvent определяет событие "mainButtonClicked" клик на главную кнопку после чего выполняетя функция и инстукция по сокрытию кнопки
 		Telegram.WebApp.onEvent("mainButtonClicked", function(){
-			getValue();
+            getValue();
 			if (tg.MainButton.isVisible){
 				tg.MainButton.hide();
 		}
