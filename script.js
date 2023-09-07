@@ -43,15 +43,17 @@ let tg = window.Telegram.WebApp;
             },
 	  ];
 
-	  var   i, x = "", z = "", y= "" ;
+	  var   i, x = "", z = "", y= "", b= "" ;
 	  for (let i = 0; i < store.length; i++){ 
          x += store[i].name+ "<br>";
-         z += store[i].input1="<input type='checkbox' class='checkmark'/><input id='input1' class='cls1' type='number' placeholder='зона1'>"+ "<br>";
-		 y += store[i].input2="<input type='checkbox'class='checkmark'/><input id='input2' class='cls2' type='number' placeholder='зона2'>"+ "<br>";
+         z += store[i].input1="<input type='checkbox' class='checkmark'/><input id='input1' class='cls1' type='number' placeholder='z1'>"+ "<br>";
+		 y += store[i].input2="<input type='checkbox'class='checkmark'/><input id='input2' class='cls2' type='number' placeholder='z2'>"+ "<br>";
+		 b += store[i].input3="<input type='checkbox'class='checkmark'/><input id='input3' class='cls3' type='number' placeholder='z3'>"+ "<br>";
 	     
 		  document.getElementById("name").innerHTML = x;
           document.getElementById("input1").innerHTML = z;
 	      document.getElementById("input2").innerHTML = y;
+	      document.getElementById("input3").innerHTML = b;
 	      
  
 };
