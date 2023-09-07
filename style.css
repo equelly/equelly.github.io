@@ -27,16 +27,9 @@ table {
     width: 100%;
 }
 
-th {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-	font-size: 26px;
-	
-}
 td {
 font-size: 22px;
-
+border-bottom: 1px solid #4e4747;
 }
 input {
     width: 40px;
