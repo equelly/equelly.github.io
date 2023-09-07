@@ -94,6 +94,7 @@ let tg = window.Telegram.WebApp;
 	 
 	for (var i = 0; i < store.length; i++) {
 	var d = new Date(); 
+     document.getElementById('data').innerHTML = 'данные на ';
 	 document.getElementById('time').innerHTML = formatDate(d); 
 	    var val1 = document.getElementsByClassName('cls1')[i].value;//переменной val присваиваем значение поля ввода
 		//document.getElementsByClassName('cls1')[i].value="";
