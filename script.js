@@ -9,7 +9,7 @@ let tg = window.Telegram.WebApp;
 		
  		 user.appendChild(p);
 		
-
+         
 	var storeZ = [
 	     {name:"№5",R1:0,
 		 R2:0,
@@ -88,8 +88,25 @@ let tg = window.Telegram.WebApp;
 	     document.getElementById("demo").innerHTML += '<p>Перегрузка'+ storeZ[i].name +'<br>Руда '+ storeZ[i].R +'</p>';
 		 
 	  }*/
-	  
-	  
+	
+      
+      let d = new Date();
+      
+      document.getElementById("time").innerHTML = formatDate(d); 
+	  //функция для вывода даты в формате 00.00.00
+     function formatDate(date) {
+
+        var dd = date.getDate();
+        if (dd < 10) dd = '0' + dd;
+      
+        var mm = date.getMonth() + 1;
+        if (mm < 10) mm = '0' + mm;
+      
+        var yy = date.getFullYear() % 100;
+        if (yy < 10) yy = '0' + yy;
+      
+        return dd + '.' + mm + '.' + yy;
+      } 
 	 function getValue() {
 	 
 	for (var i = 0; i < storeZ.length; i++) {
