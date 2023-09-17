@@ -9,54 +9,225 @@ let tg = window.Telegram.WebApp;
 		
  		//  user.appendChild(p);
 		
-         
-	var store = [
-	     {name:"№5",R1:0,
-		 R2:0,
-		 R:function (){
-		 return Number(this.R1)+Number(this.R2);}
-		 },
-	     {name:"№15",R1:0,
-		 R2:0,
-		 R:function (){
-		 return Number(this.R1)+Number(this.R2);}
-		 },
-         {name:"№4",R1:0,
-		 R2:0,
-		 R:function (){
-		 return Number(this.R1)+Number(this.R2);}
-            },
-            {name:"№9",R1:0,
-            R2:0,
-            R:function (){
-            return Number(this.R1)+Number(this.R2);}
-            },
-            {name:"№10",R1:0,
-            R2:0,
-            R:function (){
-            return Number(this.R1)+Number(this.R2);}
-            },
-            {name:"№14",R1:0,
-            R2:0,
-            R:function (){
-            return Number(this.R1)+Number(this.R2);}
-            },
-	  ];
+	let store = [
+		{name:'№5',
+		zones:[
+			{number:'1',V:0,catGM:'', delivery: false, ship: true},
+			{number:'2',V:0,catGM:'', delivery: false, ship: false},
+			{number:'3',V:0,catGM:'', delivery: false, ship: false},
+			{number:'4',V:0,catGM:'', delivery: false, ship: false}
+	],
+	V:function(){
+		let sum = 0;
+			for(let i =0; i<this.zones.length; i++){
+			sum += Number(this.zones[i].V);
+			}
+			return sum;
+			}
+	},
+		{name:'№15',
+		zones:[
+			{number:'1',V:0,catGM:'', delivery: false, ship: false},
+			{number:'2',V:0,catGM:'', delivery: false, ship: false},
+			{number:'3',V:0,catGM:'', delivery: false, ship: false},
+			{number:'4',V:0,catGM:'', delivery: false, ship: false}
+	],
+	V:function(){
+		let sum = 0;
+			for(let i =0; i<this.zones.length; i++){
+			sum += Number(this.zones[i].V);
+			}
+			return sum;
+			}
+		},
+		{name:'№4',
+		zones:[
+			{number:'1',V:0,catGM:'', delivery: false, ship: false},
+			{number:'2',V:0,catGM:'', delivery: false, ship: false},
+			{number:'3',V:0,catGM:'', delivery: false, ship: false},
+			{number:'4',V:0,catGM:'', delivery: false, ship: false}
+	],
+	V:function(){
+		let sum = 0;
+			for(let i =0; i<this.zones.length; i++){
+			sum += Number(this.zones[i].V);
+			}
+			return sum;
+			}
+	},
+		{name:'№9',
+		zones:[
+			{number:'1',V:0,catGM:'', delivery: false, ship: false},
+			{number:'2',V:0,catGM:'', delivery: false, ship: false},
+			{number:'3',V:0,catGM:'', delivery: false, ship: false},
+			{number:'4',V:0,catGM:'', delivery: false, ship: false}
+	],
+	V:function(){
+		let sum = 0;
+			for(let i =0; i<this.zones.length; i++){
+			sum += Number(this.zones[i].V);
+			}
+			return sum;
+			}
+	},
+		{name:'№10',
+		zones:[
+			{number:'1',V:0,catGM:'', delivery: false, ship: false},
+			{number:'2',V:0,catGM:'', delivery: false, ship: false},
+			{number:'3',V:0,catGM:'', delivery: false, ship: false},
+			{number:'4',V:0,catGM:'', delivery: false, ship: false}
+	],
+	V:function(){
+		let sum = 0;
+			for(let i =0; i<this.zones.length; i++){
+			sum += Number(this.zones[i].V);
+			}
+			return sum;
+			}
+		},
+		{name:'№14',
+		zones:[
+			{number:'1',V:0,catGM:'', delivery: false, ship: false},
+			{number:'2',V:0,catGM:'', delivery: false, ship: false},
+			{number:'3',V:0,catGM:'', delivery: false, ship: false},
+			{number:'4',V:0,catGM:'', delivery: false, ship: false}
+	],
+	V:function(){
+		let sum = 0;
+			for(let i =0; i<this.zones.length; i++){
+			sum += Number(this.zones[i].V);
+			}
+			return sum;
+			}
+	}
+	]	
+	
+	// var store = [
+	//      {name:"№5",
+	// 	 V1:0, V2:0,
+		
+		 
+	// 	 V3:0, V4:0,
+	// 	 V:function (){
+	// 	 return Number(this.V1)+Number(this.V2) + Number(this.V3)+Number(this.V4);}
+	// 	 },
+	//      {name:"№15",
+	// 	 V1:0, V2:0,
+		
+		 
+	// 	 V3:0, V4:0,
+	// 	 V:function (){
+	// 	 return Number(this.V1)+Number(this.V2) + Number(this.V3)+Number(this.V4);}
+	// 	 },
+    //      {name:"№4",
+	// 	 V1:0, V2:0,
+		
+		 
+	// 	 V3:0, V4:0,
+	// 	 V:function (){
+	// 	 return Number(this.V1)+Number(this.V2) + Number(this.V3)+Number(this.V4);}
+    //         },
+    //         {name:"№9",
+	// 		V1:0, V2:0,
+		
+		 
+	// 	 V3:0, V4:0,
+	// 	 V:function (){
+	// 	 return Number(this.V1)+Number(this.V2) + Number(this.V3)+Number(this.V4);}
+    //         },
+    //         {name:"№10",
+	// 		V1:0, V2:0,
+		
+		 
+	// 	 V3:0, V4:0,
+	// 	 V:function (){
+	// 	 return Number(this.V1)+Number(this.V2) + Number(this.V3)+Number(this.V4);}
+    //         },
+    //         {name:"№14",
+	// 		V1:0, V2:0,
+		
+		 
+	// 	 V3:0, V4:0,
+	// 	 V:function (){
+	// 	 return Number(this.V1)+Number(this.V2) + Number(this.V3)+Number(this.V4);}
+    //         },
+	//   ];
+	 
+	  let cardzone = document.querySelector('#cardzone');
+	  let titleCard = '', Card = '', listZones ='';
+		for (let i = 0; i < store.length; i++){ 
+			Card = document.createElement('div');
+				Card.className = "card mt-2";
+				Card.style="width: 25rem";
+				
+			titleCard = document.createElement('div');
+				titleCard.className='card-header';
+				titleCard.innerHTML= 'перегрузка'+store[i].name;
+				titleCard.title =store[i].name;
+			Card.appendChild(titleCard);
+			listZones =  document.createElement('ul');
+				listZones.className ='list-group list-group-flush';
+				listZones.title =store[i].name;
+			
+				for (let z =0; z < store[i].zones.length; z++){
+					let li = document.createElement('li');
+					li.className='list-group-item';
+					li.innerHTML = 'зона №' + store[1].zones[z].number  +`<input type='checkbox'class='checkmark' id = 'check${store[i].name}(${z+1})'/>  
+					<input id='${store[i].name}(${z+1})' class='cls' type='number' placeholder='объем' min = 1 max = 30>
+					<select name="categories" id = 'catGM${store[i].name}(${z+1})'>
+						<option value="нет">нет зоны</option>
+						<option value="руда">руда</option>
+						<option value="вскрыша">вскрыша</option>
+					</select>`;
+					
 
-	  var   i, x = "", z = "", y= "", b= "" ;
-	  for (let i = 0; i < store.length; i++){ 
-         x += store[i].name+ "<br>";
-         z += store[i].input1="<input type='checkbox' class='checkmark'/><input id='input1' class='cls1' type='number' placeholder='z1'>"+ "<br>";
-		 y += store[i].input2="<input type='checkbox'class='checkmark'/><input id='input2' class='cls2' type='number' placeholder='z2'>"+ "<br>";
-		 b += store[i].input3="<input type='checkbox'class='checkmark'/><input id='input3' class='cls3' type='number' placeholder='z3'>"+ "<br>";
+					listZones.appendChild(li);
+				}
+				// Zone1 =  document.createElement('il');
+				// 	Zone1.innerHTML='зона1';
+				// 	 Zone1.class="list-group-item";
+					// Zone1.id="input1";
+					// let input1 = document.createElement('input');
+								
+								
+					// 			input1.className = "w-50 mb-2";
+					// 			input1.type = "number";
+				// 	// 	Zone1.appendChild(input1);
+				// 	listZones.appendChild(Zone1);
+				// Zone2 =  document.createElement('il');
+				// 	Zone2.innerHTML='зона2';
+				// 		 Zone2.class="list-group-item";
+				// 		// Zone2.id="input2";
+				// 		// let input2 = document.createElement('input');
+									
+				// 		// 			input2.className = "w-50 mb-2";
+				// 		// 			input2.type = "number";
+				// 		// 	Zone2.appendChild(input2);
+				
+				// listZones.appendChild(Zone2);	
+			
+				Card.appendChild(listZones);
+			
+			
+		
+			cardzone.appendChild(Card);
+			
+		}
+
+// 	  var   i, x = "", z = "", y= "", b= "" ;
+// 	  for (let i = 0; i < store.length; i++){ 
+//          x += store[i].name+ "<br>";
+//          z += store[i].input1="<input type='checkbox' class='checkmark'/><input id='input1' class='cls1' type='number' placeholder='z1'>"+ "<br>";
+// 		 y += store[i].input2="<input type='checkbox'class='checkmark'/><input id='input2' class='cls2' type='number' placeholder='z2'>"+ "<br>";
+// 		 b += store[i].input3="<input type='checkbox'class='checkmark'/><input id='input3' class='cls3' type='number' placeholder='z3'>"+ "<br>";
 	     
-		  document.getElementById("name").innerHTML = x;
-          document.getElementById("input1").innerHTML = z;
-	      document.getElementById("input2").innerHTML = y;
-	      document.getElementById("input3").innerHTML = b;
+// 		  document.getElementById("name").innerHTML = x;
+//           document.getElementById("input1").innerHTML = z;
+// 	      document.getElementById("input2").innerHTML = y;
+// 	      document.getElementById("input3").innerHTML = b;
 	      
  
-};
+// };
 	  
 
       
@@ -80,33 +251,57 @@ let tg = window.Telegram.WebApp;
       
         return dd + '.' + mm + '.' + yy+ '(' + hh + ':'+min+')';
       } 
+	  
+
+
 	 function getValue() {
-	 
-	for (var i = 0; i < store.length; i++) {
 	var d = new Date(); 
      document.getElementById('data').innerHTML = 'данные на ';
 	 document.getElementById('time').innerHTML = formatDate(d); 
-	    var val1 = document.getElementsByClassName('cls1')[i].value;//переменной val присваиваем значение поля ввода
-		//document.getElementsByClassName('cls1')[i].value="";
-		var val2 = document.getElementsByClassName('cls2')[i].value;
-		//document.getElementsByClassName('cls2')[i].value="";
-		var st1 = store[i].R1=val1;//присваеваем объекту массива значение из поля  ввода
-		var st2 = store[i].R2=val2;
-		}
+		
+	
+	
+		
+			for (let i = 0; i < store.length; i++) {
+			
+			
+			
+				for (let z = 0; z < store[i].zones.length; z++){
+					//console.log(store[i].zones[z]);
+					if (document.getElementById(`check${store[i].name}(${store[i].zones[z].number})`).checked == true){
+						store[i].zones[z].delivery = true;
+					}
+				
+		//переменной val присваиваем значение поля ввода
+			 
+					//if (document.getElementsByTagName('select')['categories'].value == 'руда'){
+						
+						store[i].zones[z].V=document.getElementById(`${store[i].name}(${store[i].zones[z].number})`).value;
+					//}			
+				}
+				}
+				
+					 
+				//присваеваем объекту массива значение из поля  ввода
+			
+		
+		console.log(store);
 		document.getElementById("demo").innerHTML= "";
-		//document.getElementById("name").innerHTML= "";
 		
-		store.sort(function(a,b){
-		return a.R()-b.R();
-		});
 		
-		for(var i=0; i <store.length; i++ ) {
+		  store.sort(function(a,b){
+		  return a.V()-b.V();
+		  });
 		
-		document.getElementById("demo").innerHTML += '<p>Перегрузка <strong>'+ store[i].name +  '</strong><br>R1__ <markR>'+ store[i].R1 +'</markR>R2 __<markR>'+ store[i].R2 +'</markR> всего: '+ store[i].R() +'</p>';
-		}
+		for(let i=0; i <store.length; i++ ) {
+			
+		
+		document.getElementById("demo").innerHTML += '<p>Перегрузка <strong>'+ store[i].name +  '</strong><br>зона1_<strong>'+ store[i].zones[0].V +'</strong> зона2_<strong>'+ store[i].zones[1].V +'</strong>зона3_<strong>' + store[i].zones[2].V +'</strong> зона4_<strong>' + store[i].zones[3].V+ '</strong> Всего:<strong>'+store[i].V()+ '</strong></p>';
+			}
+	//console.log(store);
 		
 	  }
-
+	  
 	  let Allinputs  = document.querySelectorAll("input");
 	 
 	  for (let i=0; i<Allinputs.length; i++){
@@ -129,3 +324,5 @@ let tg = window.Telegram.WebApp;
 				tg.MainButton.hide();
 		}
 	})
+	
+  

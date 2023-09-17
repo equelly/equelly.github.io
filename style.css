@@ -13,9 +13,7 @@
 .item {
     text-align: center;
 }
-   #input1,#input2 {
-    width: 35%;   /* Ширина поля в пикселах */
-   } 
+   
    markR {
     background-color: #00ffc4;
     color: black;
@@ -32,8 +30,8 @@ font-size: 22px;
 border-bottom: 1px solid #4e4747;
 }
 input {
-    width: 40px;
-    
+   
+    width: 150px;
     font-size: 15px; 
     
 }
