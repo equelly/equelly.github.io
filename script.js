@@ -102,56 +102,7 @@ let tg = window.Telegram.WebApp;
 	}
 	]	
 	
-	// var store = [
-	//      {name:"№5",
-	// 	 V1:0, V2:0,
-		
-		 
-	// 	 V3:0, V4:0,
-	// 	 V:function (){
-	// 	 return Number(this.V1)+Number(this.V2) + Number(this.V3)+Number(this.V4);}
-	// 	 },
-	//      {name:"№15",
-	// 	 V1:0, V2:0,
-		
-		 
-	// 	 V3:0, V4:0,
-	// 	 V:function (){
-	// 	 return Number(this.V1)+Number(this.V2) + Number(this.V3)+Number(this.V4);}
-	// 	 },
-    //      {name:"№4",
-	// 	 V1:0, V2:0,
-		
-		 
-	// 	 V3:0, V4:0,
-	// 	 V:function (){
-	// 	 return Number(this.V1)+Number(this.V2) + Number(this.V3)+Number(this.V4);}
-    //         },
-    //         {name:"№9",
-	// 		V1:0, V2:0,
-		
-		 
-	// 	 V3:0, V4:0,
-	// 	 V:function (){
-	// 	 return Number(this.V1)+Number(this.V2) + Number(this.V3)+Number(this.V4);}
-    //         },
-    //         {name:"№10",
-	// 		V1:0, V2:0,
-		
-		 
-	// 	 V3:0, V4:0,
-	// 	 V:function (){
-	// 	 return Number(this.V1)+Number(this.V2) + Number(this.V3)+Number(this.V4);}
-    //         },
-    //         {name:"№14",
-	// 		V1:0, V2:0,
-		
-		 
-	// 	 V3:0, V4:0,
-	// 	 V:function (){
-	// 	 return Number(this.V1)+Number(this.V2) + Number(this.V3)+Number(this.V4);}
-    //         },
-	//   ];
+	
 	 
 	  let cardzone = document.querySelector('#cardzone');
 	  let titleCard = '', Card = '', listZones ='';
@@ -175,37 +126,15 @@ let tg = window.Telegram.WebApp;
 					li.innerHTML = 'зона №' + store[1].zones[z].number  +`<input type='checkbox'class='checkmark' id = 'check${store[i].name}(${z+1})'/>  
 					<input id='${store[i].name}(${z+1})' class='cls' type='number' placeholder='объем' min = 1 max = 30>
 					<select name="categories" id = 'catGM${store[i].name}(${z+1})'>
-						<option value="нет">нет зоны</option>
-						<option value="руда">руда</option>
-						<option value="вскрыша">вскрыша</option>
+						<option value="">нет зоны</option>
+						<option value="R">руда</option>
+						<option value="V">вскрыша</option>
 					</select>`;
 					
 
 					listZones.appendChild(li);
 				}
-				// Zone1 =  document.createElement('il');
-				// 	Zone1.innerHTML='зона1';
-				// 	 Zone1.class="list-group-item";
-					// Zone1.id="input1";
-					// let input1 = document.createElement('input');
-								
-								
-					// 			input1.className = "w-50 mb-2";
-					// 			input1.type = "number";
-				// 	// 	Zone1.appendChild(input1);
-				// 	listZones.appendChild(Zone1);
-				// Zone2 =  document.createElement('il');
-				// 	Zone2.innerHTML='зона2';
-				// 		 Zone2.class="list-group-item";
-				// 		// Zone2.id="input2";
-				// 		// let input2 = document.createElement('input');
-									
-				// 		// 			input2.className = "w-50 mb-2";
-				// 		// 			input2.type = "number";
-				// 		// 	Zone2.appendChild(input2);
 				
-				// listZones.appendChild(Zone2);	
-			
 				Card.appendChild(listZones);
 			
 			
@@ -213,22 +142,6 @@ let tg = window.Telegram.WebApp;
 			cardzone.appendChild(Card);
 			
 		}
-
-// 	  var   i, x = "", z = "", y= "", b= "" ;
-// 	  for (let i = 0; i < store.length; i++){ 
-//          x += store[i].name+ "<br>";
-//          z += store[i].input1="<input type='checkbox' class='checkmark'/><input id='input1' class='cls1' type='number' placeholder='z1'>"+ "<br>";
-// 		 y += store[i].input2="<input type='checkbox'class='checkmark'/><input id='input2' class='cls2' type='number' placeholder='z2'>"+ "<br>";
-// 		 b += store[i].input3="<input type='checkbox'class='checkmark'/><input id='input3' class='cls3' type='number' placeholder='z3'>"+ "<br>";
-	     
-// 		  document.getElementById("name").innerHTML = x;
-//           document.getElementById("input1").innerHTML = z;
-// 	      document.getElementById("input2").innerHTML = y;
-// 	      document.getElementById("input3").innerHTML = b;
-	      
- 
-// };
-	  
 
       
      
@@ -271,7 +184,7 @@ let tg = window.Telegram.WebApp;
 					if (document.getElementById(`check${store[i].name}(${store[i].zones[z].number})`).checked == true){
 						store[i].zones[z].delivery = true;
 					}
-				
+					store[i].zones[z].catGM=document.getElementById(`catGM${store[i].name}(${store[i].zones[z].number})`).value;
 		//переменной val присваиваем значение поля ввода
 			 
 					//if (document.getElementsByTagName('select')['categories'].value == 'руда'){
@@ -296,7 +209,13 @@ let tg = window.Telegram.WebApp;
 		for(let i=0; i <store.length; i++ ) {
 			
 		
-		document.getElementById("demo").innerHTML += '<p>Перегрузка <strong>'+ store[i].name +  '</strong><br>зона1_<strong>'+ store[i].zones[0].V +'</strong> зона2_<strong>'+ store[i].zones[1].V +'</strong>зона3_<strong>' + store[i].zones[2].V +'</strong> зона4_<strong>' + store[i].zones[3].V+ '</strong> Всего:<strong>'+store[i].V()+ '</strong></p>';
+		document.getElementById("demo").innerHTML += 
+		
+		'<p>Перегрузка <strong>'+ store[i].name +  '</strong><br>'
+		+(store[i].zones[0].catGM !=''? store[i].zones[0].catGM +'1 = <strong>'+ store[i].zones[0].V :'')+'</strong>'
+		+(store[i].zones[1].catGM !=''? store[i].zones[1].catGM +'2 = <strong>'+ store[i].zones[1].V :'')+'</strong>'
+		+(store[i].zones[2].catGM !=''? store[i].zones[2].catGM +'3 = <strong>'+ store[i].zones[2].V :'')+'</strong>'
+		+(store[i].zones[3].catGM !=''? store[i].zones[3].catGM +'4 = <strong>'+ store[i].zones[3].V :'')+'</strong><div style="text-align: right;">Всего:<strong>'+store[i].V()+ '</strong></div></p><hr>';
 			}
 	//console.log(store);
 		
