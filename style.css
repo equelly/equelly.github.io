@@ -3,7 +3,7 @@
     background-color: #08f19b1a;
 }
 .container {
-    max-width: 450px;
+    max-width: 400px;
 }
 .inner {
     display: grid;

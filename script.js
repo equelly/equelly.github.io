@@ -109,7 +109,7 @@ let tg = window.Telegram.WebApp;
 		for (let i = 0; i < store.length; i++){ 
 			Card = document.createElement('div');
 				Card.className = "card mt-2";
-				Card.style="width: 20rem";
+				Card.style="min-width:20rem; margin: auto;";
 				
 			titleCard = document.createElement('div');
 				titleCard.className='card-header';
@@ -215,7 +215,7 @@ let tg = window.Telegram.WebApp;
 		+(store[i].zones[0].catGM !=''? store[i].zones[0].catGM +'1 = <strong>'+ store[i].zones[0].V :'')+'</strong>'
 		+(store[i].zones[1].catGM !=''? store[i].zones[1].catGM +'2 = <strong>'+ store[i].zones[1].V :'')+'</strong>'
 		+(store[i].zones[2].catGM !=''? store[i].zones[2].catGM +'3 = <strong>'+ store[i].zones[2].V :'')+'</strong>'
-		+(store[i].zones[3].catGM !=''? store[i].zones[3].catGM +'4 = <strong>'+ store[i].zones[3].V :'')+'</strong><div style="text-align: right;">Всего:<strong>'+store[i].V()+ '</strong></div></p><hr>';
+		+(store[i].zones[3].catGM !=''? store[i].zones[3].catGM +'4 = <strong>'+ store[i].zones[3].V :'')+'</strong><space style="text-align: right;">      Всего:<strong>'+store[i].V()+ '</strong></space></p><hr>';
 			}
 	//console.log(store);
 		
