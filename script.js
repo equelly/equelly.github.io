@@ -109,7 +109,7 @@ let tg = window.Telegram.WebApp;
 		for (let i = 0; i < store.length; i++){ 
 			Card = document.createElement('div');
 				Card.className = "card mt-2";
-				Card.style="width: 25rem";
+				Card.style="width: 20rem";
 				
 			titleCard = document.createElement('div');
 				titleCard.className='card-header';
