@@ -169,8 +169,8 @@ let tg = window.Telegram.WebApp;
 
 	 function getValue() {
 	var d = new Date(); 
-     document.getElementById('data').innerHTML = 'данные на ';
-	 document.getElementById('time').innerHTML = formatDate(d); 
+    
+	 document.getElementById('time').innerHTML ='данные на '+ formatDate(d); 
 		
 	
 	
@@ -198,7 +198,7 @@ let tg = window.Telegram.WebApp;
 				//присваеваем объекту массива значение из поля  ввода
 			
 		
-		console.log(store);
+		//console.log(store);
 		document.getElementById("demo").innerHTML= "";
 		
 		
@@ -211,11 +211,11 @@ let tg = window.Telegram.WebApp;
 		
 		document.getElementById("demo").innerHTML += 
 		
-		'<p>Перегрузка <strong>'+ store[i].name +  '</strong><br>'
+		'<p>Перегрузка <strong>'+ store[i].name +  '</strong><space style="float: right;">Всего:<strong>'+store[i].V()+ '</strong></space><br>'
 		+(store[i].zones[0].catGM !=''? store[i].zones[0].catGM +'1 = <strong>'+ store[i].zones[0].V :'')+'</strong>'
 		+(store[i].zones[1].catGM !=''? store[i].zones[1].catGM +'2 = <strong>'+ store[i].zones[1].V :'')+'</strong>'
 		+(store[i].zones[2].catGM !=''? store[i].zones[2].catGM +'3 = <strong>'+ store[i].zones[2].V :'')+'</strong>'
-		+(store[i].zones[3].catGM !=''? store[i].zones[3].catGM +'4 = <strong>'+ store[i].zones[3].V :'')+'</strong><space style="text-align: right;">      Всего:<strong>'+store[i].V()+ '</strong></space></p><hr>';
+		+(store[i].zones[3].catGM !=''? store[i].zones[3].catGM +'4 = <strong>'+ store[i].zones[3].V :'')+'</strong></p><hr>';
 			}
 	//console.log(store);
 		
