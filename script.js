@@ -12,10 +12,10 @@ let tg = window.Telegram.WebApp;
 	let store = [
 		{name:'№5',
 		zones:[
-			{number:'1',V:0,catGM:'', delivery: false, ship: true},
-			{number:'2',V:0,catGM:'', delivery: false, ship: false},
-			{number:'3',V:0,catGM:'', delivery: false, ship: false},
-			{number:'4',V:0,catGM:'', delivery: false, ship: false}
+			{number:'1',V:0,R:0,catGM:'', delivery: false, ship: true},
+			{number:'2',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 	],
 	V:function(){
 		let sum = 0;
@@ -23,14 +23,22 @@ let tg = window.Telegram.WebApp;
 			sum += Number(this.zones[i].V);
 			}
 			return sum;
+			},
+	R:function(){
+		let sum = 0;
+			for(let i =0; i<this.zones.length; i++){
+			sum += Number(this.zones[i].R);
 			}
+			return sum;
+			},	
+			
 	},
 		{name:'№15',
 		zones:[
-			{number:'1',V:0,catGM:'', delivery: false, ship: false},
-			{number:'2',V:0,catGM:'', delivery: false, ship: false},
-			{number:'3',V:0,catGM:'', delivery: false, ship: false},
-			{number:'4',V:0,catGM:'', delivery: false, ship: false}
+			{number:'1',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'2',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 	],
 	V:function(){
 		let sum = 0;
@@ -38,14 +46,21 @@ let tg = window.Telegram.WebApp;
 			sum += Number(this.zones[i].V);
 			}
 			return sum;
+			},
+	R:function(){
+		let sum = 0;
+			for(let i =0; i<this.zones.length; i++){
+			sum += Number(this.zones[i].R);
 			}
+			return sum;
+			},	
 		},
 		{name:'№4',
 		zones:[
-			{number:'1',V:0,catGM:'', delivery: false, ship: false},
-			{number:'2',V:0,catGM:'', delivery: false, ship: false},
-			{number:'3',V:0,catGM:'', delivery: false, ship: false},
-			{number:'4',V:0,catGM:'', delivery: false, ship: false}
+			{number:'1',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'2',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 	],
 	V:function(){
 		let sum = 0;
@@ -53,14 +68,21 @@ let tg = window.Telegram.WebApp;
 			sum += Number(this.zones[i].V);
 			}
 			return sum;
+			},
+	R:function(){
+		let sum = 0;
+			for(let i =0; i<this.zones.length; i++){
+			sum += Number(this.zones[i].R);
 			}
+			return sum;
+			},	
 	},
 		{name:'№9',
 		zones:[
-			{number:'1',V:0,catGM:'', delivery: false, ship: false},
-			{number:'2',V:0,catGM:'', delivery: false, ship: false},
-			{number:'3',V:0,catGM:'', delivery: false, ship: false},
-			{number:'4',V:0,catGM:'', delivery: false, ship: false}
+			{number:'1',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'2',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 	],
 	V:function(){
 		let sum = 0;
@@ -68,14 +90,21 @@ let tg = window.Telegram.WebApp;
 			sum += Number(this.zones[i].V);
 			}
 			return sum;
-			}
+			},
+			R:function(){
+				let sum = 0;
+					for(let i =0; i<this.zones.length; i++){
+					sum += Number(this.zones[i].R);
+					}
+					return sum;
+					},	
 	},
 		{name:'№10',
 		zones:[
-			{number:'1',V:0,catGM:'', delivery: false, ship: false},
-			{number:'2',V:0,catGM:'', delivery: false, ship: false},
-			{number:'3',V:0,catGM:'', delivery: false, ship: false},
-			{number:'4',V:0,catGM:'', delivery: false, ship: false}
+			{number:'1',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'2',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 	],
 	V:function(){
 		let sum = 0;
@@ -83,14 +112,21 @@ let tg = window.Telegram.WebApp;
 			sum += Number(this.zones[i].V);
 			}
 			return sum;
-			}
+			},
+			R:function(){
+				let sum = 0;
+					for(let i =0; i<this.zones.length; i++){
+					sum += Number(this.zones[i].R);
+					}
+					return sum;
+					},	
 		},
 		{name:'№14',
 		zones:[
-			{number:'1',V:0,catGM:'', delivery: false, ship: false},
-			{number:'2',V:0,catGM:'', delivery: false, ship: false},
-			{number:'3',V:0,catGM:'', delivery: false, ship: false},
-			{number:'4',V:0,catGM:'', delivery: false, ship: false}
+			{number:'1',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'2',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 	],
 	V:function(){
 		let sum = 0;
@@ -98,7 +134,14 @@ let tg = window.Telegram.WebApp;
 			sum += Number(this.zones[i].V);
 			}
 			return sum;
-			}
+			},
+			R:function(){
+				let sum = 0;
+					for(let i =0; i<this.zones.length; i++){
+					sum += Number(this.zones[i].R);
+					}
+					return sum;
+					},	
 	}
 	]	
 	
@@ -187,10 +230,13 @@ let tg = window.Telegram.WebApp;
 					store[i].zones[z].catGM=document.getElementById(`catGM${store[i].name}(${store[i].zones[z].number})`).value;
 		//переменной val присваиваем значение поля ввода
 			 
-					//if (document.getElementsByTagName('select')['categories'].value == 'руда'){
+					
 						
 						store[i].zones[z].V=document.getElementById(`${store[i].name}(${store[i].zones[z].number})`).value;
-					//}			
+
+						if (document.getElementById(`catGM${store[i].name}(${store[i].zones[z].number})`).value == 'R'){
+							store[i].zones[z].R=document.getElementById(`${store[i].name}(${store[i].zones[z].number})`).value;	
+					}			
 				}
 				}
 				
@@ -198,7 +244,7 @@ let tg = window.Telegram.WebApp;
 				//присваеваем объекту массива значение из поля  ввода
 			
 		
-		//console.log(store);
+		console.log(store);
 		document.getElementById("demo").innerHTML= "";
 		
 		
@@ -211,7 +257,7 @@ let tg = window.Telegram.WebApp;
 		
 		document.getElementById("demo").innerHTML += 
 		
-		'<p>Перегрузка <strong>'+ store[i].name +  '</strong><space style="float: right;">Всего:<strong>'+store[i].V()+ '</strong></space><br>'
+		'<p>Перегрузка <strong>'+ store[i].name +  '</strong><space style="float: right;">Всего:<strong>'+store[i].V()+ '</strong><em> руды:'+store[i].R()+ '</em></space><br>'
 		+(store[i].zones[0].catGM !=''? store[i].zones[0].catGM +'1 = <strong>'+ store[i].zones[0].V :'')+'</strong>'
 		+(store[i].zones[1].catGM !=''? store[i].zones[1].catGM +'2 = <strong>'+ store[i].zones[1].V :'')+'</strong>'
 		+(store[i].zones[2].catGM !=''? store[i].zones[2].catGM +'3 = <strong>'+ store[i].zones[2].V :'')+'</strong>'
