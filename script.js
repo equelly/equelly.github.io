@@ -12,10 +12,10 @@ let tg = window.Telegram.WebApp;
 	let store = [
 		{name:'№5',
 		zones:[
-			{number:'1',V:0,R:0,catGM:'', delivery: false, ship: true},
-			{number:'2',V:0,R:0,catGM:'', delivery: false, ship: false},
-			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
-			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
+			{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: true},
+			{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'R', delivery: false, ship: false},
+			{number:'4',V:0,R:0,catGM:'V', delivery: false, ship: false}
 	],
 	V:function(){
 		let sum = 0;
@@ -35,9 +35,9 @@ let tg = window.Telegram.WebApp;
 	},
 		{name:'№15',
 		zones:[
-			{number:'1',V:0,R:0,catGM:'', delivery: false, ship: false},
-			{number:'2',V:0,R:0,catGM:'', delivery: false, ship: false},
-			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'1',V:0,R:0,catGM:'R', delivery: false, ship: false},
+			{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'V', delivery: false, ship: false},
 			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 	],
 	V:function(){
@@ -57,9 +57,9 @@ let tg = window.Telegram.WebApp;
 		},
 		{name:'№4',
 		zones:[
-			{number:'1',V:0,R:0,catGM:'', delivery: false, ship: false},
-			{number:'2',V:0,R:0,catGM:'', delivery: false, ship: false},
-			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'1',V:0,R:0,catGM:'R', delivery: false, ship: false},
+			{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'V', delivery: false, ship: false},
 			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 	],
 	V:function(){
@@ -79,10 +79,10 @@ let tg = window.Telegram.WebApp;
 	},
 		{name:'№9',
 		zones:[
-			{number:'1',V:0,R:0,catGM:'', delivery: false, ship: false},
-			{number:'2',V:0,R:0,catGM:'', delivery: false, ship: false},
-			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
-			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
+			{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: false},
+			{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'R', delivery: false, ship: false},
+			{number:'4',V:0,R:0,catGM:'V', delivery: false, ship: false}
 	],
 	V:function(){
 		let sum = 0;
@@ -101,9 +101,9 @@ let tg = window.Telegram.WebApp;
 	},
 		{name:'№10',
 		zones:[
-			{number:'1',V:0,R:0,catGM:'', delivery: false, ship: false},
-			{number:'2',V:0,R:0,catGM:'', delivery: false, ship: false},
-			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: false},
+			{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'R', delivery: false, ship: false},
 			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 	],
 	V:function(){
@@ -123,9 +123,9 @@ let tg = window.Telegram.WebApp;
 		},
 		{name:'№14',
 		zones:[
-			{number:'1',V:0,R:0,catGM:'', delivery: false, ship: false},
-			{number:'2',V:0,R:0,catGM:'', delivery: false, ship: false},
-			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: false},
+			{number:'2',V:0,R:0,catGM:'V', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'R', delivery: false, ship: false},
 			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 	],
 	V:function(){
@@ -166,12 +166,14 @@ let tg = window.Telegram.WebApp;
 				for (let z =0; z < store[i].zones.length; z++){
 					let li = document.createElement('li');
 					li.className='list-group-item';
-					li.innerHTML = 'зона №' + store[1].zones[z].number  +`<input type='checkbox'class='checkmark' id = 'check${store[i].name}(${z+1})'/>  
+					li.innerHTML = 'зона №' + store[i].zones[z].number  +`<input type='checkbox'class='checkmark' id = 'check${store[i].name}(${z+1})'/>  
 					<input id='${store[i].name}(${z+1})' class='cls' type='number' placeholder='объем' min = 1 max = 30>
-					<select name="categories" id = 'catGM${store[i].name}(${z+1})'>
-						<option value="">нет зоны</option>
-						<option value="R">руда</option>
-						<option value="V">вскрыша</option>
+					<select  class ="ml-3 p-1" style = "width: 3rem" name="categories" id = 'catGM${store[i].name}(${z+1})'>
+						
+						<option value='${store[i].zones[z].catGM}'>${store[i].zones[z].catGM !==""?store[i].zones[z].catGM:""}</option>
+						<option value='R'>R</option>
+						<option value='V'>V</option>
+						<option value=''>нет зоны</option>
 					</select>`;
 					
 
