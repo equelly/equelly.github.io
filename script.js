@@ -324,18 +324,18 @@ let tg = window.Telegram.WebApp;
 	//
 	
 	  }
-	  
+	  function resetValue() {
+		localStorage.clear();
+	  }
 	  let Allinputs  = document.querySelectorAll("input");
 	 
 	  for (let i=0; i<Allinputs.length; i++){
 		Allinputs[i].addEventListener("change",function(){
 
-			if (tg.MainButton.isVisible){
-				tg.MainButton.hide();
-			}else{
+			
 				tg.MainButton.setText("добавить информацию");
 				tg.MainButton.show();
-			}
+			
 			
 	  })
 		
