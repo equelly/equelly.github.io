@@ -269,10 +269,11 @@ let tg = window.Telegram.WebApp;
 
 
 	 function getValue() {
-	var d = new Date(); 
-    
-	 document.getElementById('time').innerHTML ='данные на '+ formatDate(d); 
+		document.getElementById("demo").innerHTML= "";
+		let d = new Date(); 
 		
+		document.getElementById('time').innerHTML ='данные на '+ formatDate(d); 
+			
 	
 	
 		
@@ -300,33 +301,46 @@ let tg = window.Telegram.WebApp;
 				
 					 
 				//присваеваем объекту массива значение из поля  ввода
-			
+		localStorage.clear();	
 		localStorage.setItem('keepStore', JSON.stringify(store));
 		console.log(store);
-		document.getElementById("demo").innerHTML= "";
+		
 		
 		
 		  store.sort(function(a,b){
 		  return a.V()-b.V();
 		  });
-		
+		let storeR = store.sort(function(a,b){
+			return a.R()-b.R();
+			});
+		document.getElementById("delivery_R_list").innerHTML =' ';
+			for(let i=0; i <storeR.length; i++ ) {
 
-		  for(let i=0; i <store.length; i++ ) {
-			for(let z=0; z <store[i].zones.length; z++ ) {
+				for(let z=0; z <storeR[i].zones.length; z++ ) {
+				
 			
-		
-			if(store[i].zones[z].delivery == true){
-				if(store[i].zones[z].catGM == 'R'){
-				document.getElementById("delivery_R").innerHTML	= '<em>руда</em>'
-				document.getElementById("delivery_R_list").innerHTML +=' '+store[i].name+'('+store[i].zones[z].number+')';
+				if(storeR[i].zones[z].delivery == true){
+					if(storeR[i].zones[z].catGM == 'R'){
+							document.getElementById("delivery_R").innerHTML	= '<em>руда</em>'
+							document.getElementById("delivery_R_list").innerHTML +=' '+store[i].name+'('+store[i].zones[z].number+')';
+						}
+
+					} 
 				}
+			  }
+		document.getElementById("delivery_V_list").innerHTML = ' ';
+		  for(let i=0; i <store.length; i++ ) {
+
+			for(let z=0; z <store[i].zones.length; z++ ) {
+				if(storeR[i].zones[z].delivery == true){
 				if(store[i].zones[z].catGM == 'V'){
 					document.getElementById("delivery_V").innerHTML	= '<em>вскрыша</em>'
 					document.getElementById("delivery_V_list").innerHTML += ' '+store[i].name+'('+store[i].zones[z].number+')';
 					}
 				} 
 			}
-		  }
+		}
+		  
 		for(let i=0; i <store.length; i++ ) {
 			
 		
