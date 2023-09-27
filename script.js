@@ -310,9 +310,28 @@ let tg = window.Telegram.WebApp;
 		  return a.V()-b.V();
 		  });
 		
+
+		  for(let i=0; i <store.length; i++ ) {
+			for(let z=0; z <store[i].zones.length; z++ ) {
+			
+		
+			if(store[i].zones[z].delivery == true){
+				if(store[i].zones[z].catGM == 'R'){
+				document.getElementById("delivery_R").innerHTML	= '<em>руда</em>'
+				document.getElementById("delivery_R_list").innerHTML +=' '+store[i].name+'('+store[i].zones[z].number+')';
+				}
+				if(store[i].zones[z].catGM == 'V'){
+					document.getElementById("delivery_V").innerHTML	= '<em>вскрыша</em>'
+					document.getElementById("delivery_V_list").innerHTML += ' '+store[i].name+'('+store[i].zones[z].number+')';
+					}
+				} 
+			}
+		  }
 		for(let i=0; i <store.length; i++ ) {
 			
 		
+		
+
 		document.getElementById("demo").innerHTML += 
 		
 		'<p>Перегрузка <strong>'+ store[i].name +  '</strong><space style="float: right;">Всего:<strong>'+store[i].V()+ '</strong><em> руды:'+store[i].R()+ '</em></space><br>'
@@ -322,8 +341,8 @@ let tg = window.Telegram.WebApp;
 		+(store[i].zones[3].catGM !=''? store[i].zones[3].catGM +'4 = <strong>'+ store[i].zones[3].V :'')+'</strong></p><hr>';
 			}
 	//
-	
-	  }
+	 }
+	  
 	  function resetValue() {
 		localStorage.clear();
 	  }
