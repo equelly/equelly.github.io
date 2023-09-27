@@ -285,6 +285,8 @@ let tg = window.Telegram.WebApp;
 					//console.log(store[i].zones[z]);
 					if (document.getElementById(`check${store[i].name}(${store[i].zones[z].number})`).checked == true){
 						store[i].zones[z].delivery = true;
+					}else{
+						store[i].zones[z].delivery = false;
 					}
 					store[i].zones[z].catGM=document.getElementById(`catGM${store[i].name}(${store[i].zones[z].number})`).value;
 		//переменной val присваиваем значение поля ввода
@@ -313,7 +315,7 @@ let tg = window.Telegram.WebApp;
 		let storeR = store.sort(function(a,b){
 			return a.R()-b.R();
 			});
-		document.getElementById("delivery_R_list").innerHTML =' ';
+		document.getElementById("delivery_R_list").innerHTML = "";
 			for(let i=0; i <storeR.length; i++ ) {
 
 				for(let z=0; z <storeR[i].zones.length; z++ ) {
