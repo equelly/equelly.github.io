@@ -3,7 +3,7 @@ let tg = window.Telegram.WebApp;
  		 tg.expand();
  		 tg.MainButton.textColor = "#FFFFFF";
  		 tg.MainButton.color = "#2cab37";
-		  console.log(tg.initData);
+		
 		//  let user = document.getElementById('user');
  		//  let p = document.createElement('p');
  		//  p.innerText = `${tg.initDataUnsafe.user.first_name}${tg.initDataUnsafe.user.last_name}`;
@@ -339,6 +339,7 @@ let tg = window.Telegram.WebApp;
 				if(store[i].zones[z].catGM == 'V'){
 					document.getElementById("delivery_V").innerHTML	= '<em>вскрыша</em>'
 					document.getElementById("delivery_V_list").innerHTML += ' '+store[i].name+'('+store[i].zones[z].number+')';
+					tg.sendMessage('send!');
 					}
 				} 
 			}
