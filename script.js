@@ -283,16 +283,14 @@ let tg = window.Telegram.WebApp;
 			
 			
 				for (let z = 0; z < store[i].zones.length; z++){
-					//console.log(store[i].zones[z]);
+					
 					if (document.getElementById(`check${store[i].name}(${store[i].zones[z].number})`).checked == true){
 						store[i].zones[z].delivery = true;
 					}else{
 						store[i].zones[z].delivery = false;
 					}
 					store[i].zones[z].catGM=document.getElementById(`catGM${store[i].name}(${store[i].zones[z].number})`).value;
-		//переменной val присваиваем значение поля ввода
-			 
-					
+		
 						
 						store[i].zones[z].V=document.getElementById(`${store[i].name}(${store[i].zones[z].number})`).value;
 
@@ -306,7 +304,7 @@ let tg = window.Telegram.WebApp;
 				//присваеваем объекту массива значение из поля  ввода
 		localStorage.clear();	
 		localStorage.setItem('keepStore', JSON.stringify(store));
-		console.log(store);
+		
 		
 		
 		
