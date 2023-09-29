@@ -339,7 +339,7 @@ let tg = window.Telegram.WebApp;
 				if(store[i].zones[z].catGM == 'V'){
 					document.getElementById("delivery_V").innerHTML	= '<em>вскрыша</em>'
 					document.getElementById("delivery_V_list").innerHTML += ' '+store[i].name+'('+store[i].zones[z].number+')';
-					tg.sendMessage('send!');
+					tg.sendMessage.text('send!');
 					}
 				} 
 			}
