@@ -270,6 +270,7 @@ let tg = window.Telegram.WebApp;
 
 
 	 function getValue() {
+
 		document.getElementById("demo").innerHTML= "";
 		let d = new Date(); 
 		
@@ -357,6 +358,8 @@ let tg = window.Telegram.WebApp;
 		+(store[i].zones[3].catGM !=''? store[i].zones[3].catGM +'4 = <strong>'+ store[i].zones[3].V :'')+'</strong></p><hr>';
 			}
 	//
+	sendMessage.text = "updeted!!!!"
+
 	 }
 	  
 	  function resetValue() {
