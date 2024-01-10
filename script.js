@@ -38,7 +38,7 @@ let tg = window.Telegram.WebApp;
 			{name:'№15',
 			zones:[
 				{number:'1',V:0,R:0,catGM:'R', delivery: false, ship: false},
-				{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
+				{number:'2',V:0,R:0,catGM:'V', delivery: false, ship: false},
 				{number:'3',V:0,R:0,catGM:'V', delivery: false, ship: false},
 				{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 		],
@@ -104,8 +104,8 @@ let tg = window.Telegram.WebApp;
 			{name:'№10',
 			zones:[
 				{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: false},
-				{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
-				{number:'3',V:0,R:0,catGM:'R', delivery: false, ship: false},
+				{number:'2',V:0,R:0,catGM:'V', delivery: false, ship: false},
+				{number:'3',V:0,R:0,catGM:'V', delivery: false, ship: false},
 				{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 		],
 		V:function(){
@@ -144,7 +144,31 @@ let tg = window.Telegram.WebApp;
 						}
 						return sum;
 						},	
-		}
+		
+		},
+		{name:'№12',
+		zones:[
+			{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: false},
+			{number:'2',V:0,R:0,catGM:'V', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
+	],
+	V:function(){
+		let sum = 0;
+			for(let i =0; i<this.zones.length; i++){
+			sum += Number(this.zones[i].V);
+			}
+			return sum;
+			},
+			R:function(){
+				let sum = 0;
+					for(let i =0; i<this.zones.length; i++){
+					sum += Number(this.zones[i].R);
+					}
+					return sum;
+					},	
+	
+	}
 		]	
 		
 
@@ -161,7 +185,7 @@ let tg = window.Telegram.WebApp;
 		  for (let i = 0; i < keepStore.length; i++){ 
 			  
 			  Card = document.createElement('div');
-				  Card.className = "card mt-2";
+				  Card.className = "card";
 				  Card.style="min-width:20rem; margin: auto;";
 				  
 			  titleCard = document.createElement('div');
@@ -197,7 +221,7 @@ let tg = window.Telegram.WebApp;
 			  cardzone.appendChild(Card);
 			  
 		  }
-		  console.log(keepStore);
+	
 	}else{
 
 	
@@ -208,7 +232,7 @@ let tg = window.Telegram.WebApp;
 		for (let i = 0; i < store.length; i++){ 
 			
 			Card = document.createElement('div');
-				Card.className = "card mt-2";
+				Card.className = "card";
 				Card.style="min-width:20rem; margin: auto;";
 				
 			titleCard = document.createElement('div');
