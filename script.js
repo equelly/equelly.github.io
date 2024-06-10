@@ -146,7 +146,7 @@ let tg = window.Telegram.WebApp;
 						},	
 		
 		},
-		{name:'№12',
+		{name:'№13',
 		zones:[
 			{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: false},
 			{number:'2',V:0,R:0,catGM:'V', delivery: false, ship: false},
