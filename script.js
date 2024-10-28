@@ -14,10 +14,10 @@ let tg = window.Telegram.WebApp;
 			let store = [
 			{name:'№5',
 			zones:[
-				{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: true},
-				{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
-				{number:'3',V:0,R:0,catGM:'R', delivery: false, ship: false},
-				{number:'4',V:0,R:0,catGM:'V', delivery: false, ship: false}
+				{number:'1',V:0,R:0,catGM:'R', delivery: false, ship: true},
+				{number:'2',V:0,R:0,catGM:'V', delivery: false, ship: false},
+				{number:'3',V:0,R:0,catGM:'V', delivery: false, ship: false},
+				{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 		],
 		V:function(){
 			let sum = 0;
@@ -37,10 +37,10 @@ let tg = window.Telegram.WebApp;
 		},
 			{name:'№15',
 			zones:[
-				{number:'1',V:0,R:0,catGM:'R', delivery: false, ship: false},
-				{number:'2',V:0,R:0,catGM:'V', delivery: false, ship: false},
-				{number:'3',V:0,R:0,catGM:'V', delivery: false, ship: false},
-				{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
+				{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: false},
+				{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
+				{number:'3',V:0,R:0,catGM:'R', delivery: false, ship: false},
+				{number:'4',V:0,R:0,catGM:'V', delivery: false, ship: false}
 		],
 		V:function(){
 			let sum = 0;
@@ -59,9 +59,9 @@ let tg = window.Telegram.WebApp;
 			},
 			{name:'№4',
 			zones:[
-				{number:'1',V:0,R:0,catGM:'R', delivery: false, ship: false},
-				{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
-				{number:'3',V:0,R:0,catGM:'V', delivery: false, ship: false},
+				{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: false},
+				{number:'2',V:0,R:0,catGM:'V', delivery: false, ship: false},
+				{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
 				{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 		],
 		V:function(){
@@ -83,8 +83,8 @@ let tg = window.Telegram.WebApp;
 			zones:[
 				{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: false},
 				{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
-				{number:'3',V:0,R:0,catGM:'R', delivery: false, ship: false},
-				{number:'4',V:0,R:0,catGM:'V', delivery: false, ship: false}
+				{number:'3',V:0,R:0,catGM:'V', delivery: false, ship: false},
+				{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 		],
 		V:function(){
 			let sum = 0;
@@ -126,8 +126,8 @@ let tg = window.Telegram.WebApp;
 			{name:'№14',
 			zones:[
 				{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: false},
-				{number:'2',V:0,R:0,catGM:'V', delivery: false, ship: false},
-				{number:'3',V:0,R:0,catGM:'R', delivery: false, ship: false},
+				{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
+				{number:'3',V:0,R:0,catGM:'V', delivery: false, ship: false},
 				{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 		],
 		V:function(){
@@ -148,9 +148,9 @@ let tg = window.Telegram.WebApp;
 		},
 		{name:'№13',
 		zones:[
-			{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: false},
-			{number:'2',V:0,R:0,catGM:'V', delivery: false, ship: false},
-			{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
+			{number:'1',V:0,R:0,catGM:'R', delivery: false, ship: false},
+			{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
+			{number:'3',V:0,R:0,catGM:'V', delivery: false, ship: false},
 			{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 	],
 		V:function(){
@@ -171,10 +171,10 @@ let tg = window.Telegram.WebApp;
 		},
 		{name:'№12',
 			zones:[
-				{number:'1',V:0,R:0,catGM:'V', delivery: false, ship: true},
-				{number:'2',V:0,R:0,catGM:'R', delivery: false, ship: false},
-				{number:'3',V:0,R:0,catGM:'R', delivery: false, ship: false},
-				{number:'4',V:0,R:0,catGM:'V', delivery: false, ship: false}
+				{number:'1',V:0,R:0,catGM:'R', delivery: false, ship: true},
+				{number:'2',V:0,R:0,catGM:'V', delivery: false, ship: false},
+				{number:'3',V:0,R:0,catGM:'', delivery: false, ship: false},
+				{number:'4',V:0,R:0,catGM:'', delivery: false, ship: false}
 		],
 		V:function(){
 			let sum = 0;
